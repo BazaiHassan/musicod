@@ -4,6 +4,7 @@ import AboutView from '@/views/AboutView.vue'
 import ArticleView from '@/views/ArticleView.vue'
 import ManageView from '@/views/ManageView.vue'
 import useUserStore from '@/stores/user'
+import SongView from '@/views/SongView.vue'
 const routes = [
   {
     path: '/',
@@ -25,6 +26,11 @@ const routes = [
     name: 'manage',
     component: ManageView,
     meta: { requiresAuth: true }
+  },
+  {
+    name: 'song',
+    path: '/song/:id',
+    component: SongView
   },
   {
     path: '/:catchAll(.*)*',
